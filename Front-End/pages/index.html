@@ -1,345 +1,184 @@
-<!DOCTYPE html> 
-<html lang="pt-br"> 
-<head> 
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Control Tasks - Administrador</title> 
-    <link rel="stylesheet" href="style.css"> 
-</head> 
-<body> 
- 
-    <!--CABEÇALHO--> 
- 
-    <header class="cabecalho-admin"> 
- 
-        <button class="btn-menu" id="btnMenu"> 
-            ☰ 
-        </button> 
- 
-        <div class="logo-admin"> 
- 
-            <img src="logo.png" alt="Logo Control Tasks"> 
- 
-            <div> 
-                <h1>Control Tasks</h1> 
-                <p>Painel Administrativo</p> 
-            </div> 
-        </div> 
- 
-        <div class="usuario-admin"> 
- 
-            <span>Administrador</span> 
- 
-            <div class="avatar"> 
-                A 
-            </div> 
-        </div> 
-    </header> 
- 
- 
-    <!--MENU LATERAL--> 
- 
-    <aside class="menu-lateral" id="menuLateral"> 
- 
-        <div class="menu-titulo"> 
- 
-            <h2>Menu</h2> 
- 
-            <button class="btn-fechar" id="btnFechar"> 
-                x 
-            </button> 
-        </div> 
- 
-        <nav> 
-              
-            <a href="administrador.html"> 
-                 Dashboard 
-            </a> 
- 
-            <a href="usuarios.html"> 
-                 Usúarios 
-            </a> 
- 
-            <a href="alunos.html"> 
-                 Alunos 
-            </a> 
- 
-             <a href="professores.html"> 
-                 Professores  
-            </a> 
- 
-              <a href="turmas.html"> 
-                 Turmas  
-            </a> 
- 
-              <a href="disciplinas.html"> 
-                 Disciplinas  
-            </a> 
- 
-              <a href="permissoes.html"> 
-                 Permissões 
-            </a> 
- 
-              <a href="relatorios.html"> 
-                 Relatórios  
-            </a> 
- 
-              <a href="configuracoes.html"> 
-                 Configurações  
-            </a> 
- 
-              <a href="registros.html"> 
-                 Registros de atividades  
-            </a> 
- 
-        </nav> 
- 
- 
-    <div class="menu-sair"> 
- 
-        <a href="pagina inicial"> 
-            <!-- colocar a pag inicial --> 
-             🚪 Sair 
-        </a> 
-         
-    </div> 
- 
-    </aside> 
- 
- 
-    <main class="container-admin"> 
- 
-        <section class="titulo-dashboard"> 
- 
-            <h2>Dashboard Administrativo</h2> 
- 
-            <p> 
-                Visão geral do sistema  
-            </p> 
- 
-        </section> 
- 
- 
-        <section class="indicadores-admin"> 
- 
-            <div class="card-indicador"> 
- 
-                <span class="icone-indicador"> 
-                    🎓 
-                </span> 
- 
-             
-            <div> 
- 
-            <p>Total de aluno</p> 
- 
-            <strong id="totalAlunos"> 
-                200 
-            </strong> 
- 
-            </div>     
- 
-        </div> 
- 
-        <div class="card-indicador"> 
- 
-            <span class="icone-indicador"> 
-                👨‍🏫 
-            </span> 
- 
-            <div> 
- 
-            <p>Total de professores</p> 
- 
-            <strong id="totalProfessores"> 
-                20 
-            </strong> 
- 
-            </div> 
- 
-        </div> 
- 
-        <div class="card-indicador"> 
- 
-            <span class="icone-indicador"> 
-                🏫 
-            </span> 
- 
-            <div> 
- 
-                <p>Total de turmas</p> 
- 
-                <strong id="totalTurmas">  
-                    10 
-                </strong> 
- 
-            </div> 
- 
-        </div> 
- 
-        <div class="card-indicador"> 
- 
-            <span class="icone-indicador"> 
-                📚 
-            </span> 
- 
-            <div> 
- 
-                <p>Total de disciplinas</p> 
- 
-                <strong id="totalDisciplinas"> 
-                    20 
-                </strong> 
-            </div> 
-        </div> 
- 
-        <div class="card-indicador"> 
- 
-            <span class="icone-indicador"> 
-                🟢 
-            </span> 
- 
-            <div> 
- 
-                <p>Usuários ativos</p> 
- 
-                <strong id="usuariosAtivos"> 
-                    190 
-                </strong> 
- 
-            </div> 
- 
-        </div> 
- 
-        <div class="card-indicador"> 
- 
-            <span class="icone-indicador"> 
-                🔴 
-            </span> 
- 
-            <div> 
- 
-                <p>Usuários bloqueados</p> 
- 
-                <strong id="usuariosBloqueados"> 
-                    10 
-                </strong> 
- 
-            </div> 
- 
-        </div> 
- 
-        </section> 
- 
- 
-        <!--    GERENCIAMENTO--> 
- 
-        <section class="gerenciamento"> 
- 
-            <div class="titulo-secao"> 
- 
-                <h2>Gerenciamento</h2> 
- 
-                <p>Acesse rapidamente as principais funções admistrativas.</p> 
-             
-            </div> 
- 
-            <div class="cards-gerenciamento"> 
- 
-                <a href="usuarios.html" class="card-gerenciamento"> 
- 
-                    <span>👥</span> 
- 
-                    <div> 
- 
-                        <h3>Usuários</h3> 
-                    
- 
-                    <p> 
-                        Criar, editar, excluir e bloquear usuários. 
-                    </p> 
- 
-                     </div> 
-                </a> 
- 
- 
-                 
-                <a href="turmas.html" class="card-gerenciamento"> 
- 
-                    <span>🏫</span> 
- 
-                    <div> 
- 
-                        <h3>Turmas</h3> 
-                    
- 
-                    <p> 
-                       Gerenciar e organizar as turmas. 
-                    </p> 
- 
-                     </div> 
-                </a> 
- 
- 
-                <a href="disciplinas.html" class="card-gerenciamento"> 
- 
-                    <span>📚</span> 
- 
-                    <div> 
- 
-                        <h3>Disciplinas</h3> 
-                    
- 
-                    <p> 
-                      Cadastrar e gerenciar disciplinas. 
-                    </p> 
- 
-                     </div> 
-                </a> 
- 
- 
- 
-                <a href="relatorios.html" class="card-gerenciamento"> 
- 
-                    <span>📊</span> 
- 
-                    <div> 
- 
-                        <h3>Relatórios</h3> 
-                    
- 
-                    <p> 
-                      Consultar informações e relatórios. 
-                    </p> 
- 
-                     </div> 
-                </a> 
- 
- 
-                 
-                <a href="configuracoes.html" class="card-gerenciamento"> 
- 
-                    <span>⚙️</span> 
- 
-                    <div> 
- 
-                        <h3>Configurações</h3> 
-                    
- 
-                    <p> 
-                      Gerenciar configurações do sistema. 
-                    </p> 
- 
-                     </div> 
-                </a> 
- 
-            </div> 
- 
-        </section> 
- 
-    </main> 
- 
-     
-    <script src="script.js"></script> 
-</body> 
-</html> 
+<!DOCTYPE html>
+<html lang="pt-br1">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orquestra</title>
+    <!--esse link permite usar ícones no site-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!--CABEÇALHO-->
+
+    <header class="cabecalho-admin">
+
+        <button class="btn-menu" id="btnMenu">
+            ☰
+        </button>
+
+        <div class="logo-imagem">
+
+            <img src="img/logo.orquestra.sf.svg" alt="Logo Orquestra">
+
+            <div>
+                <h1>Orquestra</h1>
+                <p>Gestão inteligente </p>
+            </div>
+        </div>
+
+        <div class="usuario-admin">
+
+            <!-- Adicionar o perfil do usuario -->
+            <p id="usuario"></p>
+
+            <div class="avatar">
+
+            </div>
+        </div>
+    </header>
+
+    <!--MENU LATERAL-->
+
+    <aside class="menu" id="menu">
+
+        <div class="menu-titulo">
+
+            <h2>Menu</h2>
+
+            <button class="btn-fechar" id="btnFechar">
+                x
+            </button>
+        </div>
+
+        <nav>
+
+            <a href="index.html">
+                <i class="fa-solid fa-house"></i>
+                <span>Home</span>
+
+            </a>
+
+            <a href="tarefas.html">
+                <i class="fa-regular fa-square-check"></i>
+                <span>Tarefas</span>
+
+            </a>
+
+            <a href="equipe.html">
+                <i class="fa-solid fa-users"></i>
+                <span>Equipes</span>
+
+            </a>
+
+            <a href="processos.html">
+                <i class="fa-solid fa-diagra-project"></i>
+                <span>Processos</span>
+            </a>
+
+            <a href="relatorios.html">
+                <i class="fa-solid fa-chart-colum"></i>
+                <span>Relatórios</span>
+            </a>
+
+            <a href="configuracoes.html">
+                <i class="fa-solid fa-gear"></i>
+                <span>Configurações</span>
+            </a>
+
+        </nav>
+
+
+        <div class="menu-sair">
+
+            <a href="index.html">
+                <!-- colocar a pag inicial -->
+                <i class-="fa-solid fa-right-from-bracket"></i>
+                <span>Sair</span>
+            </a>
+
+        </div>
+
+    </aside>
+
+    <main class="cardPrincipal">
+
+        <div class="card-content">
+            <h3>Orquestra</h3>
+            <p>Organize tarefas, acompanhe processos e impulsione resultados com eficiência.</p>
+
+            <button>Ver dashboard</button>
+
+        </div>
+
+
+
+        <div class="maestria">
+            <h2>MaestrIA</h2>
+            <p>A produtividade da equipe aumentou!</p>
+
+            <img src="../assets/image/maestrIA.logo.svg" alt="Logo MaestrIA">
+
+            <button class="btn-maestria">Ver sugestão </button>
+
+        </div>
+
+        <div class="modulos">
+            <a class="modulo-card" href="tarefas.html">
+                <span class="modulo-icone">
+                    <i class="fa-regular fa-calendar-check"></i>
+                </span>
+
+                <span class="modulo-conteudo">
+                    <strong>Tarefas</strong>
+                    <small>Acompanhe e gerencie tarefas da equipe</small>
+                </span>
+
+                <i class="fa-solid fa-chevron-right modulo-seta"></i>
+            </a>
+
+            <a class="modulo-card" href="funcionarios.html">
+                <span class="modulo-icone">
+                    <i class="fa-solid fa-user-group"></i>
+                </span>
+
+                <span class="modulo-conteudo">
+                    <strong>Equipes</strong>
+                    <small>Gerencie sua equipe</small>
+                </span>
+
+                <i class="fa-solid fa-chevron-right modulo-seta"></i>
+            </a>
+
+            <a class="modulo-card" href="processos.html">
+                <span class="modulo-icone">
+                    <i class="fa-solid fa-code-branch"></i>
+                </span>
+
+                <span class="modulo-conteudo">
+                    <strong>Processos</strong>
+                    <small>Visualize e otimize processos</small>
+                </span>
+
+                <i class="fa-solid fa-chevron-right modulo-seta"></i>
+            </a>
+
+            <a class="modulo-card" href="relatorios.html">
+                <span class="modulo-icone">
+                    <i class="fa-solid fa-chart-column"></i>
+                </span>
+
+                <span class="modulo-conteudo">
+                    <strong>Relatórios</strong>
+                    <small>Acesse análises e indicadores</small>
+                </span>
+
+                <i class="fa-solid fa-chevron-right modulo-seta"></i>
+            </a>
+        </div>
+</body>
+
+</html>
