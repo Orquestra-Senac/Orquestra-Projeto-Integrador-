@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orquestra - Tarefas</title>
+    <!--esse link permite usar ícones no site-->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+
+     <!--CABEÇALHO--> 
+ 
+    <header class="cabecalho-admin"> 
+ 
+        <button class="btn-menu" id="btnMenu"> 
+            ☰ 
+        </button> 
+ 
+        <div class="logo-imagem"> 
+ 
+            <img src="img/logo.orquestra.sf.svg" alt="Logo Orquestra"> 
+ 
+            <div> 
+                <h1>Orquestra</h1> 
+                <p>Gestão inteligente </p> 
+            </div> 
+        </div> 
+ 
+        <div class="usuario-admin"> 
+ 
+            <strong>Mariana Souza</strong>
+            <span>Administradora</span> 
+ 
+            <div class="avatar"> 
+                MS
+            </div> 
+        </div> 
+    </header> 
+ 
+ 
+    <!--MENU LATERAL--> 
+ 
+    <aside class="menu" id="menu"> 
+ 
+        <div class="menu-titulo"> 
+ 
+            <h2>Menu</h2> 
+ 
+            <button class="btn-fechar" id="btnFechar"> 
+                x 
+            </button> 
+        </div> 
+ 
+        <nav> 
+              
+            <a href="index.html"> 
+                <i class="fa-solid fa-house"></i>
+                <span>Home</span>
+            
+            </a> 
+ 
+            <a href="tarefas.html"> 
+                 <i class="fa-regular fa-square-check"></i>
+                <span>Tarefas</span>
+            
+            </a> 
+ 
+            <a href="equipe.html"> 
+                  <i class="fa-solid fa-users"></i>
+                <span>Equipes</span>
+            
+            </a> 
+ 
+             <a href="processos.html"> 
+                  <i class="fa-solid fa-diagra-project"></i>
+                <span>Processos</span>
+             </a>
+              
+                <a href="relatorios.html"> 
+                  <i class="fa-solid fa-chart-colum"></i>
+                <span>Relatórios</span>
+            </a> 
+ 
+            <a href="configuracoes.html"> 
+                  <i class="fa-solid fa-gear"></i>
+                <span>Configurações</span>
+            </a> 
+ 
+        </nav> 
+ 
+ 
+    <div class="menu-sair"> 
+ 
+        <a href="index.html"> 
+            <!-- colocar a pag inicial --> 
+             <i class-="fa-solid fa-right-from-bracket"></i>
+           <span>Sair</span>
+        </a> 
+         
+    </div> 
+ 
+    </aside> 
+
+
+    <main class="conteudo">
+
+        <section class="titulo-tarefas">
+
+            <div>
+                <span class="camionho">
+                    Home /Tarefas 
+                </span>
+
+                <h1>Tarefas</h1>
+                <p> Organize, acompanhe e gerencie as tarefas da equipe.</p>
+            </div>
+
+            <!-- botão criar nova tarefa-->
+
+            <button clas="btn-nova-tarefa" id="btnNovaTarefa">
+
+                <i class="fa-solid  fa-plus"></i>
+                Nova tarefa
+            </button>
+        </section>
+
+
+        <!-- resumo das tarefas-->
+
+
+        <section class="resumo-tarefas">
+
+            <div class="card-tarefas">
+
+                <div class="icone-tarefa">
+                    <i class="fa-solid fa-list-check"></i>
+                </div>
+           
+            <div>
+
+            <span>Total de tarefas</span>
+
+            <strong id="totalTarefas">
+                0
+            </strong>
+             </div>
+            </div>
+
+             <div class="card-tarefa">
+
+                    <div class="icone-tarefa pendente">
+                        <i class="fa-regular fa-clock"></i>
+                    </div>
+                
+                <div>
+
+                <span>pendentes</span>
+
+                <strong id="tarefasPendentes">
+                    0
+                </strong>
+             </div>
+             </div>
+
+
+            <div class="card-tarefa">
+
+                    <div class="icone-tarefa concluida">
+                        <i class="fa-regular fa-clock"></i>
+                    </div>
+                
+                <div>
+
+                <span>Concluídas</span>
+
+                <strong id="tarefasPendentes">
+                    0
+                </strong>
+             </div>
+             </div>
+
+
+              <div class="card-tarefa">
+
+                    <div class="icone-tarefa atrasada">
+                        <i class="fa-soliod fa-triangle-exclamation"></i>
+                    </div>
+                
+                <div>
+
+                <span>Atrasadas</span>
+
+                <strong id="tarefasAtrasadas">
+                    0
+                </strong>
+             </div>
+             </div>
+        </section>
+
+
+        <!-- área dos filtros -->
+
+        <section class="filtros-tarefas">
+
+            <div class="busca">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input 
+                type="text"
+                id="buscarTarefa"
+                placeholder="Buscar tarefa...">
+            </div>
+
+            <!-- filtro de status -->
+
+            <select id="filtroStatus">
+
+                <option value="todas">
+                    Todas
+                </option>
+
+                <option value="concluídas">
+                 Concluídas
+                </option>
+
+                <option value="pendentes">
+                    Pendentes
+                </option>
+
+                <option value="atrasadas">
+                   Atrasadas
+                </option>
+            </select>
+
+       <!-- filtro de prioridade -->
+
+       <select id="filtroPrioridade">
+
+        <option value="todas">
+            Todas as prioridades 
+        </option>
+
+        <option value="alta">
+            Alta
+        </option>
+
+        <option value="media">
+            Média
+        </option>
+
+        <option value="baixa">
+           Baixa
+        </option>
+
+       </select>
+       </section>
+
+       <!--Lista de tarefas-->
+
+       <section class="lista-tarefas">
+
+        <div class="cabecalho-lista">
+
+            <h2>Minhas tarefas</h2>
+
+            <span id="quantidadeTarefas">
+                0 tarefas
+            </span>
+            </div>
+
+            <!-- as tarefas serão colocadas aqui pelo js-->
+
+            <div id="tarefas">
+
+                <!-- as tarefas decverão aparecer aqui-->
+            </div>
+       
+       
+        </section>
+
+
+    </main>
+
+    <!-- janela para criar tarefa-->
+
+    <div class="janela" id="janelaTarefa">
+
+        <div class="janela-conteudo">
+            <!--cabeçalho da janela -->
+
+            <div class="janela-topo">
+
+                <h2>Nova tarefa</h2>
+
+                <button id="fecharJanela">
+                    x
+                </button>
+            </div>
+
+            <!--formulário-->
+
+            <form id="formTarefa">
+                <label for="nomeTarefa">
+                    Nome da tarefa
+                </label>
+
+                <input 
+                type="text"
+                id="nomeTarefa"
+                placeholder="Ex: Finalizar relatório"
+                required>
+
+                <label for="descricaoTarefa">
+                    Descrição
+                </label>
+
+                <textarea 
+                id="descricaoTarefa"
+                placeholder="Descreva a tarefa..."></textarea>
+
+                <label for="prioridadeTarefa">
+                    Prioridade
+                </label>
+
+                <select id="prioridadeTarefa">
+                    <option vlaue="baixa">
+                        Baixa 
+                    </option>
+
+                     <option vlaue="media">
+                        Média
+                    </option>
+
+                     <option vlaue="Alta">
+                        Alta 
+                    </option>
+                </select>
+
+                <label for="categoriaTarefa">
+                    Categoria
+                </label>
+
+                <select id="categoriaTarefas">
+
+                    <option value="geral">
+                        Geral
+                    </option>
+
+                    <option vlaue="Administrativo">
+                        Administrativo
+                    </option>
+
+                    <option value="projeto">
+                        Projeto
+                    </option>
+
+                    <option value="reuniao">
+                        Reunião
+                    </option>
+                </select>
+
+                <!-- data de entrega -->
+
+                <label for="dataTarefa">
+                    Data de entrega
+                </label>
+
+                <input 
+                type="date"
+                id="dataTarefa"
+                required> 
+
+                <!--botões-->
+
+                <div class="botoes-formulario">
+
+                    <button 
+                    type="button"
+                    id="cancelarTarefa"
+                    class="btn-cancelar">
+                Cancelar </button>
+
+                <button 
+                type="submit"
+                class="btn-salvar"
+                >
+                Salvar tarefa
+             
+                </button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+ 
+
+
+
+   <script src=""></script>
+</body>
+</html>
